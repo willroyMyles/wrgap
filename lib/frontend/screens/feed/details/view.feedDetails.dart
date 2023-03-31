@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:wrgap/backend/extensions/extension.textButton.dart';
 import 'package:wrgap/backend/models/model.feed.dart';
+import 'package:wrgap/backend/utils/util.theme.dart';
 
 class FeedDetails extends StatelessWidget {
   final FeedModel model;
@@ -14,8 +16,9 @@ class FeedDetails extends StatelessWidget {
         child: Scaffold(
           backgroundColor: Colors.amber,
           bottomNavigationBar: Container(
+              height: 50,
               margin: const EdgeInsets.symmetric(horizontal: 0),
-              padding: const EdgeInsets.symmetric(horizontal: 10),
+              padding: const EdgeInsets.symmetric(horizontal: 5),
               decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(0),
@@ -34,7 +37,27 @@ class FeedDetails extends StatelessWidget {
                       icon: const Row(
                         children: [Icon(Icons.chevron_left), Text("Back")],
                       )),
-                  const Spacer()
+                  const Spacer(),
+                  vDivider,
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      TextButton(
+                              onPressed: () {},
+                              child: Text("watch".capitalize!))
+                          .primary,
+                      sizer,
+                      TextButton(
+                              onPressed: () {},
+                              child: Text("make offer".capitalize!))
+                          .primary,
+                      sizer,
+                      TextButton(
+                              onPressed: () {},
+                              child: Text("make comment".capitalize!))
+                          .primary,
+                    ],
+                  )
                 ],
               )),
           body: Column(children: [
@@ -66,7 +89,8 @@ class FeedDetails extends StatelessWidget {
                   )
                 ],
               ),
-            )
+            ),
+            const Spacer(),
           ]),
         ),
       ),

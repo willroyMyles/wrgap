@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:wrgap/backend/extensions/extension.textButton.dart';
+import 'package:wrgap/backend/utils/util.theme.dart';
+import 'package:wrgap/frontend/screens/createFeed/view.createFeed.dart';
 import 'package:wrgap/frontend/screens/feed/details/view.feedDetails.dart';
 import 'package:wrgap/frontend/screens/feed/state.feeds.dart';
 
@@ -95,6 +98,22 @@ class FeedsView extends StatelessWidget {
               },
             ),
           ),
+          Container(
+              decoration: const BoxDecoration(
+                  // color: Colors.red,
+                  ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  TextButton(
+                          onPressed: () {
+                            Get.to(() => CreateFeedView());
+                          },
+                          child: const Text("Create Post"))
+                      .primary,
+                  sizer
+                ],
+              ))
         ],
       ),
     );

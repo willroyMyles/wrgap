@@ -52,7 +52,7 @@ class HomePage extends StatelessWidget {
             begin: Alignment.centerLeft,
             end: Alignment.centerRight,
             colors: [
-              Color.fromARGB(255, 86, 174, 250),
+              Color.fromARGB(255, 54, 54, 54),
               Color.fromARGB(255, 86, 174, 250),
               Color.fromARGB(255, 107, 255, 114)
             ]).createShader(bounds);

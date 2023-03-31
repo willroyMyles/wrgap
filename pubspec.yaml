@@ -28,12 +28,13 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  csv: ^5.0.1
   cupertino_icons: ^1.0.2
   dio: ^5.0.0
+  faker: ^2.1.0
   flutter:
     sdk: flutter
   get: ^4.6.5
-  faker: ^2.1.0
 
 dev_dependencies:
   flutter_lints: ^2.0.0
